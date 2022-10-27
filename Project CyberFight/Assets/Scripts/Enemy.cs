@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject Play;
+    [SerializeField] GameObject Play;
     private Vector2 Playpos;
     public float Speed;
     void Start()

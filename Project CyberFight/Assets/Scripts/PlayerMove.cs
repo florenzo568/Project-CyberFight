@@ -9,6 +9,9 @@ public class PlayerMove : MonoBehaviour
     private Vector2 dir;
     public int Health;
     public GameObject Player;
+    public bool Spawn = false;
+
+
     void Start()
     {
         
