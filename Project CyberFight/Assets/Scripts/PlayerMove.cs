@@ -7,6 +7,8 @@ public class PlayerMove : MonoBehaviour
     public float Speed;
     public Rigidbody2D rb;
     private Vector2 dir;
+    public int Health;
+    public GameObject Player;
     void Start()
     {
         
@@ -15,12 +17,28 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Inputs();
+        if (Player != null)
+        {
+            Inputs();
+
+
+
+
+
+        }
+        
     }
     
     void FixedUpdate()
     {
-        Move();
+        if (Player != null)
+        {
+            Move();
+
+
+
+
+        }
     }
 
     void Inputs()
@@ -32,5 +50,20 @@ public class PlayerMove : MonoBehaviour
     void Move()
     {
         rb.velocity = new Vector2(dir.x * Speed, dir.y * Speed);
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            Health -= 1;
+        }
+        if (Health <= 0)
+        {
+           Debug.Log("Dead");
+            if (Player != null)
+            {
+                Destroy(gameObject, 0.1f);
+            }
+        }
     }
 }
