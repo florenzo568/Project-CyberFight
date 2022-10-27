@@ -167,7 +167,7 @@ MonoBehaviour:
   - {fileID: 88507128}
   Enemy:
   - {fileID: 1806953344}
-  Spawns: 0
+  Spawns: 1
   SpawnTime: 1
 --- !u!1 &1806953344 stripped
 GameObject:
@@ -256,6 +256,22 @@ PrefabInstance:
     - target: {fileID: 523672501267282731, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501622684688, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672502674995509, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672502954136886, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672503089004166, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
