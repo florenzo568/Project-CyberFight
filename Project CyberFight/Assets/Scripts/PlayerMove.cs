@@ -53,9 +53,9 @@ public class PlayerMove : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("Enemy1"))
         {
-            Health -= 1;
+            Health -= 10;
         }
         if (Health <= 0)
         {
