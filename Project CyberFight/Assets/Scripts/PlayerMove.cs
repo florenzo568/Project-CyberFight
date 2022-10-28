@@ -37,6 +37,7 @@ public class PlayerMove : MonoBehaviour
         if (Player != null)
         {
             Move();
+            //Debug.Log(transform.position.x);
 
 
 
