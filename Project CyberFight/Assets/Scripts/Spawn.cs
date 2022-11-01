@@ -6,10 +6,14 @@ public class Spawn : MonoBehaviour
 {
     [SerializeField] GameObject[] SpawnPoints;
     [SerializeField] GameObject[] Enemy;
+    public List <GameObject> Enemyinstances;
     public bool Spawns = false;
     public float SpawnTime = 1f;
     private int randomEnemy;
     private int randomSpawn;
+    public WaveManager Waves;
+    private int WaveNumber;
+
     void Start()
     {
         
@@ -19,6 +23,7 @@ public class Spawn : MonoBehaviour
     void Update()
     {
         SpawnNow();
+        WaveNumber = Waves.Wave;
     }
 
     void SpawnNow()
@@ -28,7 +33,11 @@ public class Spawn : MonoBehaviour
 
         if (Spawns == true)
         {
-            Instantiate(Enemy[randomEnemy], SpawnPoints[randomSpawn].transform.position, Quaternion.identity);
+            GameObject newEnem = Instantiate(Enemy[randomEnemy], SpawnPoints[randomSpawn].transform.position, Quaternion.identity);
+            Enemyinstances.Add(newEnem);
+            Enemy EnemyStats = newEnem.GetComponent<Enemy>();
+            EnemyStats.Health = 15 + (WaveNumber * 10);
+            EnemyStats.Damage = 10 + (WaveNumber * 4);
             Spawns = false;
         }
     }

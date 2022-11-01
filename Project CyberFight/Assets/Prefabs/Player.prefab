@@ -180,8 +180,8 @@ MonoBehaviour:
   Player: {fileID: 523672501267282731}
   Spawn: 0
   Projectile: {fileID: 1439022950967820541, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
-  FireRate: 1
-  FireRatereset: 1
+  FireRate: 0.5
+  FireRatereset: 0.5
   lastdir: {x: 0, y: 0}
   firePoint: {fileID: 1576503508}
   moveX: 0
@@ -231,9 +231,11 @@ MonoBehaviour:
   - {fileID: 523672503089004165}
   - {fileID: 523672502674995508}
   Enemy:
-  - {fileID: 0}
+  - {fileID: 3529418215295040844, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
+  Enemyinstances: []
   Spawns: 1
   SpawnTime: 1
+  Waves: {fileID: 1519798138682561855, guid: ab112eeb49ef52243af7c17682077513, type: 3}
 --- !u!114 &1367245044
 MonoBehaviour:
   m_ObjectHideFlags: 0
