@@ -1,12 +1,13 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class Levelload : MonoBehaviour
 {
     public GameObject Player;
-    
     public GameObject Tiles;
+    //public GameObject[] Tilecheck;
+    public List<GameObject> Tilesnew;
     Vector2 currentTile;
     Vector2 Playerpos;
     Vector2 Left;
@@ -23,6 +24,7 @@ public class Levelload : MonoBehaviour
     void Start()
     {
         currentTile = transform.position;
+        
     }
 
     // Update is called once per frame
@@ -38,16 +40,38 @@ public class Levelload : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (Tilesnew.Count > 2 && Tilesnew.Count < 0)
+        {
+            Destroy(Tilesnew[3]);
+            Tilesnew.RemoveAt(3);
+            Destroy(Tilesnew[4]);
+            Tilesnew.RemoveAt(4);
+            Destroy(Tilesnew[5]);
+            Tilesnew.RemoveAt(5);
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.transform.position.x > transform.position.x && other.gameObject.CompareTag("Player"))
+        if(other.gameObject.transform.position.x > transform.position.x && other.gameObject.CompareTag("Player") && other.tag != "Ground" && Tilesnew.Count <= 3)
         {
-            Instantiate(Tiles,Left, Quaternion.identity);
+            GameObject newTile = (GameObject)Instantiate(Tiles,Left, Quaternion.identity);
+            Tilesnew.Add(newTile);
         }
-        if(other.gameObject.transform.position.x < transform.position.x && other.gameObject.CompareTag("Player"))
+        if(other.gameObject.transform.position.x < transform.position.x && other.gameObject.CompareTag("Player") && other.tag != "Ground" && Tilesnew.Count <= 3)
         {
-            Instantiate(Tiles,Right, Quaternion.identity);
+            GameObject newTile = (GameObject)Instantiate(Tiles,Right, Quaternion.identity);
+            Tilesnew.Add(newTile);
+        }
+        if(other.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+    }
+    void OnCollisionStay2D (Collision2D col)
+    {
+        if (col.gameObject.tag == "Ground")
+        {
+            Destroy(this.gameObject);
         }
     }
 }
