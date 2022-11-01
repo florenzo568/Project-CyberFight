@@ -36,7 +36,7 @@ public class PlayerMove : MonoBehaviour
         {
             facingRight = true;
         }
-        else if(dir.x < 0)
+        else if(dir.x < 0 && moveX != 0)
         {
             facingRight = false;
         }

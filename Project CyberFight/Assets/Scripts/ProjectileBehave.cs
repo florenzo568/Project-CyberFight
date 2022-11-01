@@ -17,16 +17,15 @@ public class ProjectileBehave : MonoBehaviour
 
     void Awake()
     {
-        Playerpos = GameObject.Find("Player");
-        Player = Playerpos.GetComponent<PlayerMove>();
+        
         Right = Player.facingRight;
-        if(Right == true)
+        if(Player.facingRight == true)
         {
             rb.AddForce (transform.right * Speed * thrust);
         }
-        if (Right == false)
+        if (Player.facingRight == false)
         {
-            rb.AddForce (-transform.right * Speed * thrust);
+            rb.AddForce (-Vector3.right * Speed * thrust);
         }
 
         
@@ -37,6 +36,10 @@ public class ProjectileBehave : MonoBehaviour
     {
 
 
+        if (Player.facingRight == false)
+        {
+            Debug.Log("!");
+        }
         if (LifeTime >= 0 ){
         LifeTime -= Time.deltaTime;
         }
