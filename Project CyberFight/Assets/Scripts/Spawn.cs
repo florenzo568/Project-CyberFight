@@ -16,11 +16,14 @@ public class Spawn : MonoBehaviour
     public WaveManager Waves;
     private int WaveNumber;
     public bool Kill = false;
+    public PlayerMove Player;
+    public GameObject Playerpos;
 
 
     void Start()
     {
-        
+        Playerpos = GameObject.Find("Player");
+        Player = Playerpos.GetComponent<PlayerMove>();
     }
 
     // Update is called once per frame
@@ -30,6 +33,7 @@ public class Spawn : MonoBehaviour
         SpawnTimer();
         WaveNumber = Waves.Wave;
         KillAll();
+        
     }
 
     void SpawnNow()
@@ -44,6 +48,14 @@ public class Spawn : MonoBehaviour
             Enemy EnemyStats = newEnem.GetComponent<Enemy>();
             EnemyStats.Health = 15 + (WaveNumber * 10);
             EnemyStats.Damage = 10 + (WaveNumber * 4);
+            if(Player.FMJ == true)
+            {
+                EnemyStats.BulletDamage = 5 * 3;
+            }
+            else
+            {
+                EnemyStats.BulletDamage = 5;
+            }
             Spawns = false;
             SpawnTime = StartTime;
         }

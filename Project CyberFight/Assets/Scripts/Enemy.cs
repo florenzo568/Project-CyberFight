@@ -7,15 +7,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject Play;
     private Vector2 Playpos;
     public float Speed;
-    public int Health;
+    public double Health;
     public PlayerMove Player;
     public GameObject Playerpos;
     public int Damage;
+    public double BulletDamage = 5;
     void Start()
     {
         Playerpos = GameObject.Find("Player");
         Player = Playerpos.GetComponent<PlayerMove>();
-        Health = 20;
     }
 
     // Update is called once per frame
@@ -32,13 +32,14 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            Health -= 5;
+            Health -= BulletDamage;
         }
         if(other.gameObject.CompareTag("Player"))
         {

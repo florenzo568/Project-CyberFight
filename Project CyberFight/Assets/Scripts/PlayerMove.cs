@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
     public float moveY;
     public bool facingRight;
     public bool RapidFire = false;
+    public bool FMJ = false;
 
 
     void Start()
@@ -116,6 +117,10 @@ public class PlayerMove : MonoBehaviour
         if(other.gameObject.CompareTag("RapidFire"))
         {
             RapidFire = true;
+        }
+        if (other.gameObject.CompareTag("FMJ"))
+        {
+            FMJ = true;
         }
     }
 }
