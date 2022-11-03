@@ -8,6 +8,9 @@ TagManager:
   - Ground
   - Bullet
   - RapidFire
+  - FMJ
+  - Shield
+  - Limb
   layers:
   - Default
   - TransparentFX

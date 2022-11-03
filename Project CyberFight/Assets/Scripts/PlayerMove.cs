@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
     public float Speed;
     public Rigidbody2D rb;
     public Vector2 dir;
-    public int Health;
+    public float Health;
     public GameObject Player;
     public bool Spawn = false;
     [SerializeField] GameObject Projectile;
@@ -20,6 +20,8 @@ public class PlayerMove : MonoBehaviour
     public bool facingRight;
     public bool RapidFire = false;
     public bool FMJ = false;
+    public bool Shield = false;
+    public bool Limb = false;
 
 
     void Start()
@@ -52,6 +54,11 @@ public class PlayerMove : MonoBehaviour
        if(dir.x > 0 && dir.y > 0)
         {
             lastdir = dir;
+        }
+       if (Limb == true)
+        {
+            Speed = Speed * 1.3f;
+            Limb = false;
         }
 
     }
@@ -122,5 +129,14 @@ public class PlayerMove : MonoBehaviour
         {
             FMJ = true;
         }
+        if (other.gameObject.CompareTag("Shield"))
+        {
+            Shield = true;
+        }
+        if (other.gameObject.CompareTag("Limb"))
+        {
+            Limb = true;
+        }
+
     }
 }

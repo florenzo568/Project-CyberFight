@@ -8,14 +8,16 @@ public class Enemy : MonoBehaviour
     private Vector2 Playpos;
     public float Speed;
     public double Health;
+    public double StartHealth;
     public PlayerMove Player;
     public GameObject Playerpos;
-    public int Damage;
+    public float Damage;
     public double BulletDamage = 5;
     void Start()
     {
         Playerpos = GameObject.Find("Player");
         Player = Playerpos.GetComponent<PlayerMove>();
+        StartHealth = Health;
     }
 
     // Update is called once per frame
