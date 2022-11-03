@@ -761,12 +761,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTime: 50
   startingTime: 10
+  Boss: 0
+  active: 1
   textmeshPro: {fileID: 1748564235}
---- !u!1 &1806953344 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3529418215295040844, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
-  m_PrefabInstance: {fileID: 3529418214612653772}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2067639140
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,9 +879,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1432038630}
     - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: SpawnTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: Enemy.Array.data[0]
       value: 
-      objectReference: {fileID: 1806953344}
+      objectReference: {fileID: 3529418215295040844, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
     - target: {fileID: 523672501267282727, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1009,11 +1014,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529418215295040840, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.53
+      value: 3.49
       objectReference: {fileID: 0}
     - target: {fileID: 3529418215295040840, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.13
+      value: 10.99
       objectReference: {fileID: 0}
     - target: {fileID: 3529418215295040840, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1051,6 +1056,10 @@ PrefabInstance:
       propertyPath: Play
       value: 
       objectReference: {fileID: 1367245031}
+    - target: {fileID: 3529418215295040841, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
+      propertyPath: Speed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3529418215295040844, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
       propertyPath: m_Name
       value: Enemy

@@ -42,9 +42,13 @@ public class ProjectileBehave : MonoBehaviour
             rb.AddForce (-transform.up * Speed * thrust);
         }
 
-        if (Dir.x == 0 && Dir.y == 0)
+        if (Dir.x == 0 && Dir.y == 0 && Player.facingRight == true)
         {
             rb.AddForce (transform.right * Speed * thrust);
+        }
+        else if (Dir.x == 0 && Dir.y == 0 && Player.facingRight == false)
+        {
+            rb.AddForce (-transform.right * Speed * thrust);
         }
         
         

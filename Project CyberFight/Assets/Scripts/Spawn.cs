@@ -8,8 +8,8 @@ public class Spawn : MonoBehaviour
     [SerializeField] GameObject[] Enemy;
     public List <GameObject> Enemyinstances;
     public bool Spawns = false;
-    public float SpawnTime = .5f;
-    public float StartTime = .5f;
+    public float SpawnTime = 1f;
+    public float StartTime = 1f;
     private int randomEnemy;
     private int randomSpawn;
     public bool SpawningEnemies = true;

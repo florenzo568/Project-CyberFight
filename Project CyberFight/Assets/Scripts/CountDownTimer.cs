@@ -8,6 +8,8 @@ public class CountDownTimer : MonoBehaviour
 {
     public float currentTime;
     public float startingTime;
+    public bool Boss = false;
+    public bool active = true;
     public TextMeshProUGUI textmeshPro;
     float minutes;
     float seconds;
@@ -21,10 +23,15 @@ public class CountDownTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (active == true)
+        {
         currentTime -= 1 * Time.deltaTime;
+        }
         TimeToDisplay(currentTime);
         if(currentTime <= 0)
         {
+            active = false;
+            Boss = true;
             currentTime = startingTime;
         }
     }

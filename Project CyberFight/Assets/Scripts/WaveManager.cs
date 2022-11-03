@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    public int Wave = 1;
+    public int Wave = 0;
     public Enemy Enemys;
     public CountDownTimer timer;
     private float time;
@@ -19,18 +19,22 @@ public class WaveManager : MonoBehaviour
     void Update()
     {
         time = timer.currentTime;
-        StartCoroutine(Wave1());
-        if (time <= .5)
+
+        if (timer.Boss == true)
         {
             TimeUp = true;
+        }
+        if (TimeUp == true)
+        {
+            TimeUp = false;
+            Wave += 1;
+            Debug.Log("Wave Over: Open Shop" + Wave);
+            timer.Boss = false;
+            timer.active = true;
+           
         }
 
     }
 
-    IEnumerator Wave1()
-    {
-        yield return new WaitForSeconds(time);
-        Debug.Log("Boss Spawn");
-
-    }
+    
 }
