@@ -36,7 +36,7 @@ public class Spawn : MonoBehaviour
             GameObject newEnem = Instantiate(Enemy[randomEnemy], SpawnPoints[randomSpawn].transform.position, Quaternion.identity);
             Enemyinstances.Add(newEnem);
             Enemy EnemyStats = newEnem.GetComponent<Enemy>();
-            EnemyStats.Health = 15 + (WaveNumber * 10);
+            EnemyStats.Health = 20 + (WaveNumber * 10);
             EnemyStats.Damage = 10 + (WaveNumber * 4);
             Spawns = false;
         }

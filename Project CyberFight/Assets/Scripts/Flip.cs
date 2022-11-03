@@ -5,9 +5,11 @@ using UnityEngine;
 public class Flip : MonoBehaviour
 {
     public PlayerMove Player;
+    public GameObject Players;
     void Start()
     {
-        
+        Players = GameObject.Find("Player");
+        Player = Players.GetComponent<PlayerMove>();
     }
 
     // Update is called once per frame

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public Animator animator;
+    
     public float Speed;
     public Rigidbody2D rb;
     public Vector2 dir;
@@ -28,6 +30,8 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("Speed", Mathf.Abs(dir.x));
+
         FireRate = FireRate - Time.deltaTime;
         Inputs();
         Shoot1();

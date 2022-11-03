@@ -486,6 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6940151703b6abd4d95f38b5aa95a41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
 --- !u!114 &1367245044 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1367245044, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
@@ -497,6 +498,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3984dafc91874314897fc32e74b56592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+--- !u!95 &1367245045
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367245031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6cad5dbfc012d484b922453988a2b989, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+>>>>>>> Stashed changes
 --- !u!1001 &1427973315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -606,6 +629,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+=======
+--- !u!114 &1432038632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432038629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3984dafc91874314897fc32e74b56592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentTiles: {fileID: 0}
+  CanPlace: 0
+  Tiles: []
+  Kill: 0
+>>>>>>> Stashed changes
 --- !u!4 &1636524930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1924103542626794477, guid: 2fd4e45593e10304792075a0ce44334e, type: 3}
@@ -760,7 +802,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 50
+<<<<<<< Updated upstream
   startingTime: 10
+=======
+  startingTime: 20
+  Boss: 0
+  active: 1
+>>>>>>> Stashed changes
   textmeshPro: {fileID: 1748564235}
 --- !u!1 &1806953344 stripped
 GameObject:
@@ -882,9 +930,63 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1432038630}
     - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+<<<<<<< Updated upstream
       propertyPath: Enemy.Array.data[0]
       value: 
       objectReference: {fileID: 1806953344}
+=======
+      propertyPath: SpawnTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Enemy.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 3529418215295040844, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Enemy.Array.data[1]
+      value: 
+      objectReference: {fileID: 3529418215295040844, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Enemy.Array.data[2]
+      value: 
+      objectReference: {fileID: 3529418215295040844, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Enemy.Array.data[3]
+      value: 
+      objectReference: {fileID: 3529418215295040844, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
+    - target: {fileID: 523672501267282720, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282720, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: FireRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1367245045}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: FireRatereset
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282726, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a587e1c913636f4c812f857e5aa6c84, type: 3}
+>>>>>>> Stashed changes
     - target: {fileID: 523672501267282727, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -942,9 +1044,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1439022950967820529, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f2fe02558938274f9586cb5b2773e20, type: 3}
+    - target: {fileID: 1439022950967820529, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439022950967820529, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439022950967820529, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1439022950967820530, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439022950967820530, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439022950967820530, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439022950967820530, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 1439022950967820530, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -985,6 +1115,10 @@ PrefabInstance:
     - target: {fileID: 1439022950967820530, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439022950967820530, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1439022950967820541, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
       propertyPath: m_Name
