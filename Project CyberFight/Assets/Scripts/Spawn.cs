@@ -15,6 +15,7 @@ public class Spawn : MonoBehaviour
     public bool SpawningEnemies = true;
     public WaveManager Waves;
     private int WaveNumber;
+    public bool Kill = false;
 
 
     void Start()
@@ -28,6 +29,7 @@ public class Spawn : MonoBehaviour
         SpawnNow();
         SpawnTimer();
         WaveNumber = Waves.Wave;
+        KillAll();
     }
 
     void SpawnNow()
@@ -55,6 +57,20 @@ public class Spawn : MonoBehaviour
             if(SpawnTime <= 0)
             {
                 Spawns = true;
+            }
+        }
+    }
+    void KillAll()
+    {
+        if(Kill == true)
+        {
+            if(Enemyinstances != null)
+            {
+                for (int i = 0; i < Enemyinstances.Count; i++)
+                {
+                    Destroy(Enemyinstances[i].gameObject);
+                }
+                Enemyinstances.Clear();
             }
         }
     }
