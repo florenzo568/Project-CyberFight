@@ -8,11 +8,14 @@ public class Spawn : MonoBehaviour
     [SerializeField] GameObject[] Enemy;
     public List <GameObject> Enemyinstances;
     public bool Spawns = false;
-    public float SpawnTime = 1f;
+    public float SpawnTime = .5f;
+    public float StartTime = .5f;
     private int randomEnemy;
     private int randomSpawn;
+    public bool SpawningEnemies = true;
     public WaveManager Waves;
     private int WaveNumber;
+
 
     void Start()
     {
@@ -23,6 +26,7 @@ public class Spawn : MonoBehaviour
     void Update()
     {
         SpawnNow();
+        SpawnTimer();
         WaveNumber = Waves.Wave;
     }
 
@@ -39,6 +43,19 @@ public class Spawn : MonoBehaviour
             EnemyStats.Health = 15 + (WaveNumber * 10);
             EnemyStats.Damage = 10 + (WaveNumber * 4);
             Spawns = false;
+            SpawnTime = StartTime;
+        }
+    }
+
+    void SpawnTimer()
+    {
+        if(SpawningEnemies == true)
+        {
+            SpawnTime -= Time.deltaTime;
+            if(SpawnTime <= 0)
+            {
+                Spawns = true;
+            }
         }
     }
 }

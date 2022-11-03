@@ -30,7 +30,9 @@ public class Levelload : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Player != null){
         Playerpos = Player.transform.position;
+        }
         Deload();
     }
 

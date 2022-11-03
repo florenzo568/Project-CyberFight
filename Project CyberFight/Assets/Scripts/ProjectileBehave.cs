@@ -21,16 +21,32 @@ public class ProjectileBehave : MonoBehaviour
         Playerpos = GameObject.Find("Player");
         Player = Playerpos.GetComponent<PlayerMove>();
         Right = Player.facingRight;
+        Vector2 Dir = new Vector2(Player.dir.x, Player.dir.y);
 
-        if(Player.facingRight == true)
+        if(Player.facingRight == true && Dir.x > 0)
         {
             rb.AddForce (transform.right * Speed * thrust);
         }
-        if (Player.facingRight == false)
+        if (Player.facingRight == false && Dir.x < 0)
         {
             rb.AddForce (-Vector3.right * Speed * thrust);
         }
 
+        if (Dir.y > 0)
+        {
+            rb.AddForce (transform.up * Speed * thrust);
+        }
+
+        if (Dir.y < 0)
+        {
+            rb.AddForce (-transform.up * Speed * thrust);
+        }
+
+        if (Dir.x == 0 && Dir.y == 0)
+        {
+            rb.AddForce (transform.right * Speed * thrust);
+        }
+        
         
     }
 

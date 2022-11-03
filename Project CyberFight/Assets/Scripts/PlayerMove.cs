@@ -47,7 +47,10 @@ public class PlayerMove : MonoBehaviour
     {
 
        Move();
-       
+       if(dir.x > 0 && dir.y > 0)
+        {
+            lastdir = dir;
+        }
 
     }
 
@@ -56,10 +59,7 @@ public class PlayerMove : MonoBehaviour
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
         dir = new Vector2(moveX, moveY).normalized;
-        if(dir.x != 0 && dir.y != 0)
-        {
-            lastdir = dir;
-        }
+        
         if (moveX > 0 && !facingRight)
         {
             Flip();

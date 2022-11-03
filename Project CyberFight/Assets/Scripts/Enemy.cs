@@ -22,9 +22,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         float step = Speed * Time.deltaTime;
-        if (Play != null)
+        if (Playerpos != null)
         {
-            Playpos = new Vector2(Play.transform.position.x, Play.transform.position.y);
+            Playpos = new Vector2(Playerpos.transform.position.x, Playerpos.transform.position.y);
         }
 
         transform.position = Vector2.MoveTowards(transform.position, Playpos, step);
