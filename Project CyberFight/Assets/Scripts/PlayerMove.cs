@@ -11,13 +11,14 @@ public class PlayerMove : MonoBehaviour
     public GameObject Player;
     public bool Spawn = false;
     [SerializeField] GameObject Projectile;
-    public float FireRate = 1.0f;
-    public float FireRatereset;
+    public double FireRate = 1.0f;
+    public double FireRatereset;
     public Vector2 lastdir;
     public Transform firePoint;
     public float moveX;
     public float moveY;
     public bool facingRight;
+    public bool RapidFire = false;
 
 
     void Start()
@@ -75,6 +76,11 @@ public class PlayerMove : MonoBehaviour
     }
     void Shoot1()
     {
+        if (RapidFire == true)
+        {
+            FireRatereset = FireRatereset/ 1.5;
+            RapidFire = false;
+        }
         if(FireRate <= 0){
         Instantiate(Projectile, firePoint.position, transform.rotation);
         FireRate = FireRatereset;
@@ -103,5 +109,13 @@ public class PlayerMove : MonoBehaviour
         gameObject.transform.localScale = currentScale;
 
         facingRight = !facingRight;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("RapidFire"))
+        {
+            RapidFire = true;
+        }
     }
 }
