@@ -12,11 +12,13 @@ public class PlayerMove : MonoBehaviour
     public bool Spawn = false;
     [SerializeField] GameObject Projectile;
     [SerializeField] GameObject HeavyProjectile;
+    [SerializeField] GameObject ReverseProjectile;
     [SerializeField] GameObject ThermalDetonator;
     public double FireRate = 1.0f;
     public double FireRatereset;
     public Vector2 lastdir;
     public Transform firePoint;
+    public Transform ReversefirePoint;
     public float moveX;
     public float moveY;
     public bool facingRight;
@@ -28,6 +30,7 @@ public class PlayerMove : MonoBehaviour
     public bool Burn = false;
     public bool Thermal = false;
     public bool Heavy = false;
+    public bool Back = false;
 
 
     void Start()
@@ -101,7 +104,12 @@ public class PlayerMove : MonoBehaviour
             RapidFire = false;
         }
         if(FireRate <= 0){
-        Instantiate(Projectile, firePoint.position, transform.rotation);
+        GameObject newBullet = Instantiate(Projectile, firePoint.position, transform.rotation);
+        ProjectileBehave newBullets = newBullet.GetComponent<ProjectileBehave>();
+            if (Back == true)
+            {
+                Instantiate(ReverseProjectile, ReversefirePoint.position, transform.rotation);
+            }
         FireRate = FireRatereset;
             if(Heavy == true)
             {
@@ -168,6 +176,10 @@ public class PlayerMove : MonoBehaviour
         if (other.gameObject.CompareTag("Heavy"))
         {
             Heavy = true;
+        }
+        if (other.gameObject.CompareTag("Back"))
+        {
+            Back = true;
         }
 
 
