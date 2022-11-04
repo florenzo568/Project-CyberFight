@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     public GameObject Player;
     public bool Spawn = false;
     [SerializeField] GameObject Projectile;
+    [SerializeField] GameObject HeavyProjectile;
     [SerializeField] GameObject ThermalDetonator;
     public double FireRate = 1.0f;
     public double FireRatereset;
@@ -26,6 +27,7 @@ public class PlayerMove : MonoBehaviour
     public bool Hack = false;
     public bool Burn = false;
     public bool Thermal = false;
+    public bool Heavy = false;
 
 
     void Start()
@@ -101,7 +103,12 @@ public class PlayerMove : MonoBehaviour
         if(FireRate <= 0){
         Instantiate(Projectile, firePoint.position, transform.rotation);
         FireRate = FireRatereset;
+            if(Heavy == true)
+            {
+                Instantiate(HeavyProjectile, firePoint.position, transform.rotation);
+            }
         }
+        
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -128,7 +135,7 @@ public class PlayerMove : MonoBehaviour
         facingRight = !facingRight;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) //This is prtty much all upgrades
     {
         if(other.gameObject.CompareTag("RapidFire"))
         {
@@ -158,6 +165,11 @@ public class PlayerMove : MonoBehaviour
         {
             Thermal = true;
         }
+        if (other.gameObject.CompareTag("Heavy"))
+        {
+            Heavy = true;
+        }
+
 
     }
 }

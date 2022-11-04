@@ -15,6 +15,7 @@ TagManager:
   - Burn
   - Thermal
   - Detonator
+  - Heavy
   layers:
   - Default
   - TransparentFX
