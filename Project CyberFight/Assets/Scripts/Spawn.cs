@@ -64,6 +64,10 @@ public class Spawn : MonoBehaviour
             {
                 EnemyStats.BulletDamage = 5;
             }
+            if(Player.Hack == true)
+            {
+                EnemyStats.Speed = EnemyStats.Speed/2;
+            }
             
             Spawns = false;
             SpawnTime = StartTime;

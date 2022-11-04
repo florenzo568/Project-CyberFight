@@ -11,6 +11,8 @@ TagManager:
   - FMJ
   - Shield
   - Limb
+  - Hack
+  - Burn
   layers:
   - Default
   - TransparentFX

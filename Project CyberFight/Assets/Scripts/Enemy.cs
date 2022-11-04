@@ -13,11 +13,16 @@ public class Enemy : MonoBehaviour
     public GameObject Playerpos;
     public float Damage;
     public double BulletDamage = 5;
+    public bool Burn = false;
+    public float BurnTick = 2f;
+    public float BurnTickStart = 2f;
+    public double BurnDamage = 3;
     void Start()
     {
         Playerpos = GameObject.Find("Player");
         Player = Playerpos.GetComponent<PlayerMove>();
         StartHealth = Health;
+        BurnTickStart = BurnTick;
     }
 
     // Update is called once per frame
@@ -34,6 +39,15 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (Burn == true)
+        {
+            BurnTick -= Time.deltaTime;
+        }
+        if(BurnTick <= 0)
+        {
+            Health -= BurnDamage;
+            BurnTick = BurnTickStart;
+        }
 
     }
 
@@ -42,6 +56,10 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             Health -= BulletDamage;
+            if(Player.Burn == true)
+            {
+                Burn = true;
+            }
         }
         if(other.gameObject.CompareTag("Player"))
         {

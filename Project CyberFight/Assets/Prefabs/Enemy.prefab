@@ -132,3 +132,7 @@ MonoBehaviour:
   Playerpos: {fileID: 523672501267282731, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
   Damage: 0
   BulletDamage: 5
+  Burn: 0
+  BurnTick: 2
+  BurnTickStart: 2
+  BurnDamage: 10

@@ -22,6 +22,8 @@ public class PlayerMove : MonoBehaviour
     public bool FMJ = false;
     public bool Shield = false;
     public bool Limb = false;
+    public bool Hack = false;
+    public bool Burn = false;
 
 
     void Start()
@@ -136,6 +138,14 @@ public class PlayerMove : MonoBehaviour
         if (other.gameObject.CompareTag("Limb"))
         {
             Limb = true;
+        }
+        if (other.gameObject.CompareTag("Hack"))
+        {
+            Hack = true;
+        }
+        if (other.gameObject.CompareTag("Burn"))
+        {
+            Burn = true;
         }
 
     }
