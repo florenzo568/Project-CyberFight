@@ -13,6 +13,8 @@ TagManager:
   - Limb
   - Hack
   - Burn
+  - Thermal
+  - Detonator
   layers:
   - Default
   - TransparentFX

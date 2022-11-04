@@ -17,12 +17,16 @@ public class Enemy : MonoBehaviour
     public float BurnTick = 2f;
     public float BurnTickStart = 2f;
     public double BurnDamage = 3;
+    public float ThermalTick = 1f;
+    public float ThermalTickStart = 1f;
+    public double ThermalDamage = 5;
     void Start()
     {
         Playerpos = GameObject.Find("Player");
         Player = Playerpos.GetComponent<PlayerMove>();
         StartHealth = Health;
         BurnTickStart = BurnTick;
+        ThermalTickStart = ThermalTick;
     }
 
     // Update is called once per frame
@@ -48,6 +52,11 @@ public class Enemy : MonoBehaviour
             Health -= BurnDamage;
             BurnTick = BurnTickStart;
         }
+        if(ThermalTick <= 0)
+        {
+            Health -= ThermalDamage;
+            ThermalTick = ThermalTickStart;
+        }
 
     }
 
@@ -64,6 +73,13 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             Player.Health -= Damage;
+        }
+    }
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Detonator"))
+        {
+            ThermalTick -= Time.deltaTime;
         }
     }
 }

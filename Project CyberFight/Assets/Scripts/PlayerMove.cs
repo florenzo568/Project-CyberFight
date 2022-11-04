@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     public GameObject Player;
     public bool Spawn = false;
     [SerializeField] GameObject Projectile;
+    [SerializeField] GameObject ThermalDetonator;
     public double FireRate = 1.0f;
     public double FireRatereset;
     public Vector2 lastdir;
@@ -24,6 +25,7 @@ public class PlayerMove : MonoBehaviour
     public bool Limb = false;
     public bool Hack = false;
     public bool Burn = false;
+    public bool Thermal = false;
 
 
     void Start()
@@ -61,6 +63,11 @@ public class PlayerMove : MonoBehaviour
         {
             Speed = Speed * 1.3f;
             Limb = false;
+        }
+       if (Thermal == true)
+        {
+            ThermalDetonator.gameObject.SetActive(true);
+            Thermal = false;
         }
 
     }
@@ -146,6 +153,10 @@ public class PlayerMove : MonoBehaviour
         if (other.gameObject.CompareTag("Burn"))
         {
             Burn = true;
+        }
+        if (other.gameObject.CompareTag("Thermal"))
+        {
+            Thermal = true;
         }
 
     }
