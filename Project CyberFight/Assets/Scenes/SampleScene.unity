@@ -886,16 +886,83 @@ PrefabInstance:
       objectReference: {fileID: 1432038630}
     - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: SpawnTime
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: StartTime
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: Enemy.Array.data[0]
       value: 
       objectReference: {fileID: 3529418215295040844, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 1576503507, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: m_Name
+      value: FirePoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: FMJ
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Back
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Burn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Hack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Limb
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Heavy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Shield
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Thermal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: FireRate
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: RapidFire
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: FireRatereset
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: HeavyProjectile
+      value: 
+      objectReference: {fileID: 608132677725716393, guid: d133483b5b8c7d443a9559112c63c424, type: 3}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: ReversefirePoint
+      value: 
+      objectReference: {fileID: 1297284997}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: ThermalDetonator
+      value: 
+      objectReference: {fileID: 1434727240}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: ReverseProjectile
+      value: 
+      objectReference: {fileID: 662286198841716022, guid: 9a6f0d023f3b2c94497b040669c25ed7, type: 3}
+>>>>>>> Stashed changes
     - target: {fileID: 523672501267282727, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: m_RootOrder
       value: 1
