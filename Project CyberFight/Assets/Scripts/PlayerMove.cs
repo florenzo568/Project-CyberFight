@@ -118,9 +118,9 @@ public class PlayerMove : MonoBehaviour
         }
         
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(collision.gameObject.CompareTag("Enemy1"))
+        if(other.gameObject.CompareTag("Enemy1"))
         {
             Health -= 10;
         }
@@ -133,18 +133,6 @@ public class PlayerMove : MonoBehaviour
                 Destroy(gameObject, 0.1f);
             }
         }
-    }
-    void Flip()
-    {
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
-
-        facingRight = !facingRight;
-    }
-
-    void OnTriggerEnter2D(Collider2D other) //This is prtty much all upgrades
-    {
         if(other.gameObject.CompareTag("RapidFire"))
         {
             RapidFire = true;
@@ -182,6 +170,15 @@ public class PlayerMove : MonoBehaviour
             Back = true;
         }
 
-
     }
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
+    }
+
+    
 }
