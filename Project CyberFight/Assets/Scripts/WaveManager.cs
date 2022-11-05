@@ -5,10 +5,12 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     public int Wave = 0;
-    public Enemy Enemys;
+    //public Enemy Enemys;
     public CountDownTimer timer;
     private float time;
     public bool TimeUp;
+    public bool Boss = false;
+    public bool Shop = false;
 
     void Start()
     {
@@ -28,10 +30,13 @@ public class WaveManager : MonoBehaviour
         {
             TimeUp = false;
             Wave += 1;
-            Debug.Log("Wave Over: Open Shop" + Wave);
             timer.Boss = false;
-            timer.active = true;
+            Boss = true;
            
+        }
+        if (Shop == true)
+        {
+            //Debug.Log("OpenShop");
         }
 
     }

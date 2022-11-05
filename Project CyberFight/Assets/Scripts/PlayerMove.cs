@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     public Vector2 dir;
     public float Health;
     public GameObject Player;
+    public CountDownTimer Timer;
     public bool Spawn = false;
     [SerializeField] GameObject Projectile;
     [SerializeField] GameObject HeavyProjectile;
@@ -43,7 +44,11 @@ public class PlayerMove : MonoBehaviour
     {
         FireRate = FireRate - Time.deltaTime;
         Inputs();
-        Shoot1();
+        if(Timer.Shoptimer != true)
+        {
+            Shoot1();
+        }
+        
         //Debug.Log(dir);
         if (dir.x > 0 && moveX != 0)
         {
@@ -53,6 +58,7 @@ public class PlayerMove : MonoBehaviour
         {
             facingRight = false;
         }
+        
         
     }
     

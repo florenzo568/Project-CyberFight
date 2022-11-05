@@ -6,13 +6,19 @@ public class Spawn : MonoBehaviour
 {
     [SerializeField] GameObject[] SpawnPoints;
     [SerializeField] GameObject[] Enemy;
+    [SerializeField] GameObject[] Boss;
+    private GameObject newBoss;
+    private Enemy EnemyStats;
+    private Enemy BossStats;
     public List <GameObject> Enemyinstances;
     public bool Spawns = false;
     public float SpawnTime = 1f;
     public float StartTime = 1f;
     private int randomEnemy;
     private int randomSpawn;
+    private int randomBoss;
     public bool SpawningEnemies = true;
+    public bool BossAlive;
     public WaveManager Waves;
     private int WaveNumber;
     public bool Kill = false;
@@ -33,6 +39,13 @@ public class Spawn : MonoBehaviour
         SpawnTimer();
         WaveNumber = Waves.Wave;
         KillAll();
+        if(BossAlive == true && newBoss == null)
+        {
+            Waves.Shop = true;
+            BossAlive = false;
+            SpawningEnemies = false;
+            Kill = true;
+        }
         
     }
 
@@ -40,12 +53,13 @@ public class Spawn : MonoBehaviour
     {
         randomEnemy = Random.Range(0, Enemy.Length);
         randomSpawn = Random.Range(0, SpawnPoints.Length);
+        randomBoss = Random.Range(0,Boss.Length);
 
         if (Spawns == true)
         {
             GameObject newEnem = Instantiate(Enemy[randomEnemy], SpawnPoints[randomSpawn].transform.position, Quaternion.identity);
             Enemyinstances.Add(newEnem);
-            Enemy EnemyStats = newEnem.GetComponent<Enemy>();
+            EnemyStats = newEnem.GetComponent<Enemy>();
             EnemyStats.StartHealth = EnemyStats.StartHealth + (WaveNumber * 10);
             if(Player.Shield == true)
             {
@@ -71,6 +85,14 @@ public class Spawn : MonoBehaviour
             
             Spawns = false;
             SpawnTime = StartTime;
+        }
+        if (Waves.Boss == true)
+        {
+            newBoss = Instantiate(Boss[randomBoss], SpawnPoints[randomSpawn].transform.position, Quaternion.identity);
+            Enemyinstances.Add(newBoss);
+            BossStats = newBoss.GetComponent<Enemy>();
+            Waves.Boss = false;
+            BossAlive = true;
         }
     }
 
