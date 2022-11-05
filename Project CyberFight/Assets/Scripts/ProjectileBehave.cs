@@ -69,9 +69,15 @@ public class ProjectileBehave : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy1")){
+        if (other.gameObject.CompareTag("Enemy1") || other.gameObject.CompareTag("Boss")){
+        Destroy(gameObject);
+        }
+    }
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy1") || other.gameObject.CompareTag("Boss")){
         Destroy(gameObject);
         }
     }

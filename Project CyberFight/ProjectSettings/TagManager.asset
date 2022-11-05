@@ -17,6 +17,7 @@ TagManager:
   - Detonator
   - Heavy
   - Back
+  - Boss
   layers:
   - Default
   - TransparentFX
