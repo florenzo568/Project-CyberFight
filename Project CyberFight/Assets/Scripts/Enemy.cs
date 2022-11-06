@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     public PlayerMove Player;
     public GameObject Playerpos;
     public float Damage;
-    public double BulletDamage = 5;
+    public double BulletDamage;
     public bool Burn = false;
     public float BurnTick = 2f;
     public float BurnTickStart = 2f;

@@ -8,6 +8,7 @@ public class Levelload : MonoBehaviour
     public GameObject Tiles;
     public GameObject Gamem;
     public GameMaster GM;
+    public CountDownTimer Timer;
     //public GameObject[] Tilecheck;
     public List<GameObject> Tilesnew;
     Vector2 currentTile;
@@ -39,6 +40,10 @@ public class Levelload : MonoBehaviour
         Playerpos = Player.transform.position;
         }
         Deload();
+        /*if(Timer.Shop == true)
+        {
+            //KillTiles();
+        }*/
     }
 
     void Deload()
@@ -66,16 +71,8 @@ public class Levelload : MonoBehaviour
                     Tilesnew.Remove(Tilesnew[i]);
                 }
             }
-        }
-         for (int i = 0; i < Tilesnew.Count; i++)
-            {
-                if (newTile.transform.position == Tilesnew[i].transform.position)
-                {
-                    Destroy(Tilesnew[i]);
-                    Tilesnew.Remove(Tilesnew[i]);
-                    Debug.Log("Cleared");
-                }
-            }*/
+        }*/
+        
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -104,4 +101,16 @@ public class Levelload : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    /*void KillTiles()
+    {
+         for (int i = 0; i < Tilesnew.Count; i++)
+            {
+                if (newTile.transform.position == Tilesnew[i].transform.position)
+                {
+                    Destroy(Tilesnew[i]);
+                    Tilesnew.Remove(Tilesnew[i]);
+                    Debug.Log("Cleared");
+                }
+            }
+    }*/
 }

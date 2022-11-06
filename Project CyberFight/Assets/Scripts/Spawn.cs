@@ -62,13 +62,14 @@ public class Spawn : MonoBehaviour
             Enemyinstances.Add(newEnem);
             EnemyStats = newEnem.GetComponent<Enemy>();
             EnemyStats.StartHealth = EnemyStats.StartHealth + (WaveNumber * 10);
+            EnemyStats.Health = EnemyStats.Health + (WaveNumber * 10);
             if(Player.Shield == true)
             {
                 EnemyStats.Damage = (EnemyStats.Damage / 1.15f) + (WaveNumber * 4.0f);
             }
             else
             {
-                EnemyStats.Damage = EnemyStats.Damage + (WaveNumber * 4);
+                EnemyStats.Damage = EnemyStats.Damage + (WaveNumber * 4.0f);
             }
             
             if(Player.FMJ == true)
