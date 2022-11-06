@@ -73,7 +73,6 @@ public class CountDownTimer : MonoBehaviour
         if(Shop == true)
         {
             ShopTime = 12;
-            TimeToDisplay(ShopTime);
             Shop = false;
             Shoptimer = true;
             Wave.Shop = false;
@@ -85,6 +84,7 @@ public class CountDownTimer : MonoBehaviour
                 Shoptimer = false;
                 currentTime = startingTime;
                 Spawner.SpawningEnemies = true;
+                Spawner.Kill = false;
                 active = true;
             }
 
