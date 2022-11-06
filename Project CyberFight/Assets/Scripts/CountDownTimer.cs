@@ -18,6 +18,12 @@ public class CountDownTimer : MonoBehaviour
     public TextMeshProUGUI textmeshPro;
     float minutes;
     float seconds;
+    public GameObject Shop1;
+    public GameObject Shop2;
+    private GameObject Item1;
+    private GameObject Item2;
+    public List<GameObject> Pool1 = new List<GameObject>();
+    public List<GameObject> Pool2 = new List<GameObject>();
 
     void Start()
     {
@@ -30,6 +36,7 @@ public class CountDownTimer : MonoBehaviour
     {
         CountDown();
         Shopfoo();
+        RemoveOption();
         if(currentTime < 0)
         {
             active = false;
@@ -73,6 +80,7 @@ public class CountDownTimer : MonoBehaviour
         if(Shop == true)
         {
             ShopTime = 12;
+            SpawnShop();
             Shop = false;
             Shoptimer = true;
             Wave.Shop = false;
@@ -89,4 +97,28 @@ public class CountDownTimer : MonoBehaviour
             }
 
     }
+    void SpawnShop()
+    {
+        int randomPool1 = Random.Range(0, Pool1.Count);
+        int randomPool2 = Random.Range(0, Pool2.Count);
+        GameObject Item1 = Instantiate(Pool1[randomPool1], Shop1.transform.position, Quaternion.identity);
+        Pool1.RemoveAt(randomPool1);
+        GameObject Item2 = Instantiate(Pool2[randomPool2], Shop2.transform.position, Quaternion.identity);
+        Pool2.RemoveAt(randomPool2);
+    }
+    void RemoveOption()
+    {
+        if (Shoptimer == true)
+        {
+            if (Item1 == null)
+            {
+                Destroy(Item2);
+            }
+            if (Item2 == null)
+            {
+                Destroy(Item1);
+            }
+        }
+    }
+
 }

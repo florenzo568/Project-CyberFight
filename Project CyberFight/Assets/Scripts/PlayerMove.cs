@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody2D rb;
     public Vector2 dir;
     public float Health;
+    public float StartHealth;
     public GameObject Player;
     public CountDownTimer Timer;
     public bool Spawn = false;
@@ -36,6 +37,7 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
+        StartHealth = Health;
         FireRatereset = FireRate;
     }
 

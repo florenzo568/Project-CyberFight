@@ -45,6 +45,7 @@ public class Spawn : MonoBehaviour
             BossAlive = false;
             SpawningEnemies = false;
             Kill = true;
+            Player.Health = Player.StartHealth;
         }
         
     }
@@ -63,20 +64,20 @@ public class Spawn : MonoBehaviour
             EnemyStats.StartHealth = EnemyStats.StartHealth + (WaveNumber * 10);
             if(Player.Shield == true)
             {
-                EnemyStats.Damage = (10.0f / 1.15f) + (WaveNumber * 4.0f);
+                EnemyStats.Damage = (EnemyStats.Damage / 1.15f) + (WaveNumber * 4.0f);
             }
             else
             {
-                EnemyStats.Damage = 10 + (WaveNumber * 4);
+                EnemyStats.Damage = EnemyStats.Damage + (WaveNumber * 4);
             }
             
             if(Player.FMJ == true)
             {
-                EnemyStats.BulletDamage = 5 * 3;
+                EnemyStats.BulletDamage = EnemyStats.BulletDamage * 3;
             }
             else
             {
-                EnemyStats.BulletDamage = 5;
+                EnemyStats.BulletDamage = EnemyStats.BulletDamage;
             }
             if(Player.Hack == true)
             {

@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class RapidFire : MonoBehaviour
 {
     public GameObject Texts;
     public string Text;
+    public TextMeshProUGUI TextComp;
 
     
     void Awake()
     {
        // Texts = GameObject.FindGameObjectsWithTag(this.gameObject.tag);
        Texts = GameObject.Find(Text);
-       Texts.SetActive(false);
+       TextComp = Texts.GetComponent<TextMeshProUGUI>();
+       TextComp.enabled = false;
     }
 
     // Update is called once per frame
@@ -31,14 +35,14 @@ public class RapidFire : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Texts.SetActive(true);
+            TextComp.enabled = true;
         }
     }
         void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Texts.SetActive(false);
+            TextComp.enabled = false;
         }
     }
 }
