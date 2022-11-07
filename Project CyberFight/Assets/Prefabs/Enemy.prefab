@@ -131,9 +131,13 @@ MonoBehaviour:
   Player: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
   Playerpos: {fileID: 523672501267282731, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
   Damage: 0
+<<<<<<< Updated upstream
   BulletDamage: 5
 <<<<<<< Updated upstream
 =======
+=======
+  BulletDamage: 20
+>>>>>>> Stashed changes
   Burn: 0
   BurnTick: 2
   BurnTickStart: 2
