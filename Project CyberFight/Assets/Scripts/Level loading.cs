@@ -8,7 +8,6 @@ public class Levelload : MonoBehaviour
     public GameObject Tiles;
     public GameObject Gamem;
     public GameMaster GM;
-    public CountDownTimer Timer;
     //public GameObject[] Tilecheck;
     public List<GameObject> Tilesnew;
     Vector2 currentTile;
@@ -23,8 +22,8 @@ public class Levelload : MonoBehaviour
         Player = GameObject.Find("Player");
         Gamem = GameObject.Find("GM");
         GM = Gamem.GetComponent<GameMaster>();
-        Left = new Vector2(transform.position.x - 10 , transform.position.y);
-        Right = new Vector2(transform.position.x + 10 , transform.position.y);
+        Left = new Vector2(transform.position.x - 200 , transform.position.y);
+        Right = new Vector2(transform.position.x + 200 , transform.position.y);
     }
 
     void Start()
@@ -40,15 +39,20 @@ public class Levelload : MonoBehaviour
         Playerpos = Player.transform.position;
         }
         Deload();
-        /*if(Timer.Shop == true)
+        /*if (GM.Kill == true)
         {
-            //KillTiles();
+            newTile = (GameObject)Instantiate(Tiles,Left, Quaternion.identity);
+            GM.Tiles.Add(newTile);
+            GM.CurrentTiles = newTile;
+            newTile = (GameObject)Instantiate(Tiles,Right, Quaternion.identity);
+            GM.Tiles.Add(newTile);
+            GM.CurrentTiles = newTile;
         }*/
     }
 
     void Deload()
     {
-        if(Playerpos.x - currentTile.x > 20 || Playerpos.x - currentTile.x < -20)
+        if(Playerpos.x - currentTile.x > 300 || Playerpos.x - currentTile.x < -300)
         {
             Destroy(gameObject);
         }
@@ -81,6 +85,7 @@ public class Levelload : MonoBehaviour
             newTile = (GameObject)Instantiate(Tiles,Left, Quaternion.identity);
             GM.Tiles.Add(newTile);
             GM.CurrentTiles = newTile;
+            GM.TileNames.Add(newTile.name);
            
         }
         if(other.gameObject.transform.position.x < transform.position.x && other.gameObject.CompareTag("Player") && other.tag != "Ground" && Tilesnew.Count <= 3)
@@ -88,6 +93,7 @@ public class Levelload : MonoBehaviour
             newTile = (GameObject)Instantiate(Tiles,Right, Quaternion.identity);
             GM.Tiles.Add(newTile);
             GM.CurrentTiles = newTile;
+            GM.TileNames.Add(newTile.name);
         }
         if(other.CompareTag("Ground"))
         {
@@ -101,16 +107,5 @@ public class Levelload : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    /*void KillTiles()
-    {
-         for (int i = 0; i < Tilesnew.Count; i++)
-            {
-                if (newTile.transform.position == Tilesnew[i].transform.position)
-                {
-                    Destroy(Tilesnew[i]);
-                    Tilesnew.Remove(Tilesnew[i]);
-                    Debug.Log("Cleared");
-                }
-            }
-    }*/
+
 }

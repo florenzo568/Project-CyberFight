@@ -9,7 +9,7 @@ public class ProjectileBehave : MonoBehaviour
     public GameObject Playerpos;
     private Vector2 PlayerGO;
     public Vector2 Dir;
-    private float LifeTime = 3;
+    private float LifeTime = 1.5f;
     public Rigidbody2D rb;
     public Vector3 Firedir;
     public float thrust = 18;
@@ -79,6 +79,13 @@ public class ProjectileBehave : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy1") || other.gameObject.CompareTag("Boss")){
         Destroy(gameObject);
+        }
+    }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);  
         }
     }
 

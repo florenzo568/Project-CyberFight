@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3768518579895710375}
   - component: {fileID: 235906500}
   - component: {fileID: 235906501}
+  - component: {fileID: 4894833478341964445}
+  - component: {fileID: 6973944139382558289}
   m_Layer: 0
   m_Name: Terrain1
   m_TagString: Ground
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2232786276972778379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 200, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,8 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aac4f2f9f08b7646b0a05fc1aed6f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 523672501267282731, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+  Player: {fileID: 0}
   Tiles: {fileID: 2232786276972778379}
+  Gamem: {fileID: 0}
+  GM: {fileID: 0}
   Tilesnew: []
 --- !u!61 &235906501
 BoxCollider2D:
@@ -126,4 +130,56 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.9306, y: 1}
+  m_EdgeRadius: 0
+--- !u!61 &4894833478341964445
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232786276972778379}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.46676418}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 3.2, y: 3.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.06647164}
+  m_EdgeRadius: 0
+--- !u!61 &6973944139382558289
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232786276972778379}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.46100163}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 3.2, y: 3.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.07799676}
   m_EdgeRadius: 0
