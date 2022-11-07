@@ -9,6 +9,7 @@ public class RapidFire : MonoBehaviour
     public GameObject Texts;
     public string Text;
     public TextMeshProUGUI TextComp;
+    public bool PickedUp = false;
 
     
     void Awake()
@@ -28,6 +29,7 @@ public class RapidFire : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            PickedUp = true;
             Destroy(this.gameObject);
         }
     }

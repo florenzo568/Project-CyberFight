@@ -22,6 +22,8 @@ public class CountDownTimer : MonoBehaviour
     public GameObject Shop2;
     private GameObject Item1;
     private GameObject Item2;
+    public RapidFire Item1CS;
+    public RapidFire Item2CS;
     public List<GameObject> Pool1 = new List<GameObject>();
     public List<GameObject> Pool2 = new List<GameObject>();
 
@@ -36,7 +38,7 @@ public class CountDownTimer : MonoBehaviour
     {
         CountDown();
         Shopfoo();
-        RemoveOption();
+        
         if(currentTime < 0)
         {
             active = false;
@@ -50,6 +52,7 @@ public class CountDownTimer : MonoBehaviour
         if(Shoptimer == true)
         {
             ShopTime -= Time.deltaTime;
+            RemoveOption();
         }
         if(Shoptimer == true)
         {
@@ -101,24 +104,32 @@ public class CountDownTimer : MonoBehaviour
     {
         int randomPool1 = Random.Range(0, Pool1.Count);
         int randomPool2 = Random.Range(0, Pool2.Count);
-        GameObject Item1 = Instantiate(Pool1[randomPool1], Shop1.transform.position, Quaternion.identity);
+        Item1 = Instantiate(Pool1[randomPool1], Shop1.transform.position, Quaternion.identity);
+        Item1CS = Item1.GetComponent<RapidFire>();
         Pool1.RemoveAt(randomPool1);
-        GameObject Item2 = Instantiate(Pool2[randomPool2], Shop2.transform.position, Quaternion.identity);
+        Item2 = Instantiate(Pool2[randomPool2], Shop2.transform.position, Quaternion.identity);
+        Item2CS = Item2.GetComponent<RapidFire>();
         Pool2.RemoveAt(randomPool2);
     }
     void RemoveOption()
     {
-        if (Shoptimer == true)
-        {
-            if (Item1 == null)
+            if (Item1CS.PickedUp == true)
             {
-                Destroy(Item2);
+                if(Item2 != null)
+                {
+                    Destroy(Item2);
+                }
             }
-            if (Item2 == null)
+
+            if (Item2CS.PickedUp == true)
             {
-                Destroy(Item1);
+                if(Item1 != null)
+                {
+                    Destroy(Item1);
+                }               
             }
-        }
+        
+            
     }
 
 }
