@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439022950967820530, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1439022950967820530, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439022950967820541, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
       propertyPath: m_Name
-      value: Reverse Bullet
+      value: Reverse Bullet Variant
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1439022950967820542, guid: 3d39a9f002ff43341a3da4772978f3b3, type: 3}
