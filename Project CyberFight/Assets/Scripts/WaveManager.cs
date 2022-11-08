@@ -10,6 +10,7 @@ public class WaveManager : MonoBehaviour
     private float time;
     public bool TimeUp;
     public bool Boss = false;
+    public bool BossWave = false;
     public bool Shop = false;
 
     void Start()
@@ -29,7 +30,6 @@ public class WaveManager : MonoBehaviour
         if (TimeUp == true)
         {
             TimeUp = false;
-            Wave += 1;
             timer.Boss = false;
             Boss = true;
            
@@ -37,6 +37,11 @@ public class WaveManager : MonoBehaviour
         if (Shop == true)
         {
             //Debug.Log("OpenShop");
+        }
+        if (Wave == 5)
+        {
+            BossWave = true;
+            Wave += 1;
         }
 
     }

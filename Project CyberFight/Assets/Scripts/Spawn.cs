@@ -24,6 +24,12 @@ public class Spawn : MonoBehaviour
     public bool Kill = false;
     public PlayerMove Player;
     public GameObject Playerpos;
+    public bool BossWave = false;
+    public bool BossWaveSpawn = false;
+    public GameObject Final1;
+    public GameObject Final2;
+    public Enemy BossStatsFinal1;
+    public Enemy BossStatsFinal2;
 
 
     void Start()
@@ -46,6 +52,16 @@ public class Spawn : MonoBehaviour
             SpawningEnemies = false;
             Kill = true;
             Player.Health = Player.StartHealth;
+        }
+        if(Waves.BossWave == true)
+        {
+            BossWave = true;
+            BossWaveSpawn = true;
+            Waves.BossWave = false;
+        }
+        if(BossWave == true && BossStatsFinal1.Health <= 1 && BossStatsFinal2.Health <= 1)
+        {
+            Debug.Log("End Game");
         }
         
     }
@@ -96,6 +112,23 @@ public class Spawn : MonoBehaviour
             Waves.Boss = false;
             BossAlive = true;
         }
+        if(BossWave == true)
+        {
+            SpawningEnemies = false;
+
+        }
+        if (BossWaveSpawn == true)
+            {
+                Final1 = Instantiate(Boss[randomBoss], SpawnPoints[randomSpawn].transform.position, Quaternion.identity);
+                Enemyinstances.Add(Final1);
+                BossStatsFinal1 = Final1.GetComponent<Enemy>();
+                randomBoss = Random.Range(0,Boss.Length);
+                randomSpawn = Random.Range(0, SpawnPoints.Length);
+                Final2 = Instantiate(Boss[randomBoss], SpawnPoints[randomSpawn].transform.position, Quaternion.identity);
+                Enemyinstances.Add(Final2);
+                BossStatsFinal2 = Final2.GetComponent<Enemy>();
+                BossWaveSpawn = false;
+            }
     }
 
     void SpawnTimer()

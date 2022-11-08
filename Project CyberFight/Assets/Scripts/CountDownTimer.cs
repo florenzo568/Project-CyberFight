@@ -24,6 +24,7 @@ public class CountDownTimer : MonoBehaviour
     private GameObject Item2;
     public RapidFire Item1CS;
     public RapidFire Item2CS;
+    public float WaveScaler;
     public List<GameObject> Pool1 = new List<GameObject>();
     public List<GameObject> Pool2 = new List<GameObject>();
 
@@ -43,7 +44,7 @@ public class CountDownTimer : MonoBehaviour
         {
             active = false;
             Boss = true;
-            currentTime = startingTime;
+            currentTime = startingTime; //+ (Wave.Wave * WaveScaler);
         }
         if(Wave.Shop == true)
         {
@@ -96,6 +97,7 @@ public class CountDownTimer : MonoBehaviour
                 currentTime = startingTime;
                 Spawner.SpawningEnemies = true;
                 Spawner.Kill = false;
+                Wave.Wave += 1;
                 active = true;
             }
 

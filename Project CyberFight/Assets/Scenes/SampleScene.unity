@@ -1812,6 +1812,8 @@ MonoBehaviour:
   textmeshPro: {fileID: 1748564235}
   Shop1: {fileID: 1792381892}
   Shop2: {fileID: 1010252672}
+  Item1CS: {fileID: 0}
+  Item2CS: {fileID: 0}
   Pool1:
   - {fileID: 2777054222156367950, guid: 13cc0375c4326e74694c4be33f8d3c4a, type: 3}
   - {fileID: 877626690631958333, guid: 49c716874bc7dca40a0d56bb994f7b52, type: 3}
@@ -2940,7 +2942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: Speed
-      value: 20
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: Timer

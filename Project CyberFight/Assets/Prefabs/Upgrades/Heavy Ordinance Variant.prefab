@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 654209496, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
+      propertyPath: m_Size.x
+      value: 2.3953085
+      objectReference: {fileID: 0}
+    - target: {fileID: 654209496, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.047784567
+      objectReference: {fileID: 0}
+    - target: {fileID: 654209496, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.16376948
+      objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254056, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_Name
       value: Heavy Ordinance Variant

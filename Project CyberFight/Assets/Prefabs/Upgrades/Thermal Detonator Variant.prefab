@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: Text
       value: ThermalText
       objectReference: {fileID: 0}
+    - target: {fileID: 1630367739, guid: 80460c736afb8634b85c23c1dcf10083, type: 3}
+      propertyPath: m_Size.x
+      value: 2.5445304
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630367739, guid: 80460c736afb8634b85c23c1dcf10083, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.04438281
+      objectReference: {fileID: 0}
     - target: {fileID: 2777582907799704650, guid: 80460c736afb8634b85c23c1dcf10083, type: 3}
       propertyPath: m_Color.b
       value: 0.17254901

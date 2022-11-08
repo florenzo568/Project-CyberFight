@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 654209496, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5681031
+      objectReference: {fileID: 0}
+    - target: {fileID: 654209496, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.28405154
+      objectReference: {fileID: 0}
+    - target: {fileID: 654209496, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.16376948
+      objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254056, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_Name
       value: Enhanced Limb Variant
@@ -25,15 +37,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254060, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.082511
+      value: -1.981214
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254060, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3346001
+      value: 7.2843304
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254060, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.027028993
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254060, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_LocalRotation.w
@@ -41,15 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254060, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254060, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254060, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254060, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -99,7 +111,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.1444987}
+  m_Offset: {x: 0.2574215, y: -0.1444987}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,5 +122,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.44334}
+  m_Size: {x: 1.4793367, y: 3.44334}
   m_EdgeRadius: 0

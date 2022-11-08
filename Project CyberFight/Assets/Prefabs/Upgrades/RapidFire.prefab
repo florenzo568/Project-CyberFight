@@ -118,6 +118,7 @@ MonoBehaviour:
   Texts: {fileID: 0}
   Text: RapidText
   TextComp: {fileID: 0}
+  PickedUp: 0
 --- !u!61 &1630367739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,5 +143,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.3417995}
+  m_Size: {x: 2.2997398, y: 3.3417995}
   m_EdgeRadius: 0
