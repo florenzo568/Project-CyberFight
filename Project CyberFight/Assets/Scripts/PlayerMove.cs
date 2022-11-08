@@ -33,6 +33,7 @@ public class PlayerMove : MonoBehaviour
     public bool Thermal = false;
     public bool Heavy = false;
     public bool Back = false;
+    private bool Active = true;
 
 
     void Start()
@@ -102,7 +103,11 @@ public class PlayerMove : MonoBehaviour
     }
     void Move()
     {
-        rb.velocity = new Vector2(dir.x * Speed, dir.y * Speed);
+        if (Active == true)
+        {
+            rb.velocity = new Vector2(dir.x * Speed, dir.y * Speed);
+        }
+        
     }
     void Shoot1()
     {
@@ -138,7 +143,7 @@ public class PlayerMove : MonoBehaviour
            Debug.Log("Dead");
             if (Player != null)
             {
-                Destroy(gameObject, 0.1f);
+                Death();
             }
         }
         if(other.gameObject.CompareTag("RapidFire"))
@@ -186,6 +191,13 @@ public class PlayerMove : MonoBehaviour
         gameObject.transform.localScale = currentScale;
 
         facingRight = !facingRight;
+    }
+    void Death()
+    {
+        SpriteRenderer m_SpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        m_SpriteRenderer.enabled = false;
+        //death anim + death Screen
+        Active = false;
     }
 
     
