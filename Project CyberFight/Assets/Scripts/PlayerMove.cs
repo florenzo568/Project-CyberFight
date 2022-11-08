@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] GameObject HeavyProjectile;
     [SerializeField] GameObject ReverseProjectile;
     [SerializeField] GameObject ThermalDetonator;
+    [SerializeField] GameObject GameOverScreen;
     public double FireRate = 1.0f;
     public double FireRatereset;
     public Vector2 lastdir;
@@ -41,6 +42,7 @@ public class PlayerMove : MonoBehaviour
     {
         StartHealth = Health;
         FireRatereset = FireRate;
+        GameOverScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -203,6 +205,7 @@ public class PlayerMove : MonoBehaviour
         //m_SpriteRenderer.enabled = false;
         rb.velocity = Vector2.zero;
         anim.SetTrigger("death");
+        GameOverScreen.SetActive(true);
         //death anim + death Screen
         
     }

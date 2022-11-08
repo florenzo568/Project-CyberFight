@@ -7,6 +7,7 @@ public class Spawn : MonoBehaviour
     [SerializeField] GameObject[] SpawnPoints;
     [SerializeField] GameObject[] Enemy;
     [SerializeField] GameObject[] Boss;
+    [SerializeField] GameObject Credits;
     private GameObject newBoss;
     private Enemy EnemyStats;
     private Enemy BossStats;
@@ -37,6 +38,7 @@ public class Spawn : MonoBehaviour
     {
         Playerpos = GameObject.Find("Player");
         Player = Playerpos.GetComponent<PlayerMove>();
+        Credits.SetActive(false);
     }
 
     // Update is called once per frame
@@ -67,6 +69,8 @@ public class Spawn : MonoBehaviour
             if (EndGame > 1)
             {
                 Debug.Log("EndGame FR NOW");
+                Credits.SetActive(true);
+
             }
         }
         
