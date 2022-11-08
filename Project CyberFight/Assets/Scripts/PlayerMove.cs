@@ -103,10 +103,9 @@ public class PlayerMove : MonoBehaviour
     }
     void Move()
     {
-        if (Active == true)
-        {
+
             rb.velocity = new Vector2(dir.x * Speed, dir.y * Speed);
-        }
+
         
     }
     void Shoot1()
@@ -196,6 +195,7 @@ public class PlayerMove : MonoBehaviour
     {
         SpriteRenderer m_SpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         m_SpriteRenderer.enabled = false;
+        rb.velocity = new Vector2 (0,0);
         //death anim + death Screen
         Active = false;
     }

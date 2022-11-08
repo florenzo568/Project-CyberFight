@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     public float ThermalTickStart = 1f;
     public double ThermalDamage = 5;
     public Animator _anim;
+    public bool active = true;
     void Start()
     {
         Playerpos = GameObject.Find("Player");
@@ -36,14 +37,20 @@ public class Enemy : MonoBehaviour
         float step = Speed * Time.deltaTime;
         if (Playerpos != null)
         {
-            Playpos = new Vector2(Playerpos.transform.position.x, Playerpos.transform.position.y);
+            
+                Playpos = new Vector2(Playerpos.transform.position.x, Playerpos.transform.position.y);
+            
+            
         }
-
-        transform.position = Vector2.MoveTowards(transform.position, Playpos, step);
+        if(active == true)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, Playpos, step);
+        }
         if (Health <= 10)
         {
-            _anim.SetTrigger("death");
-            Destroy(gameObject);
+            active = false;
+            _anim.SetBool("death", true);
+            Destroy(this.gameObject, 1f);
         }
         if (Burn == true)
         {
