@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9414adb509ba8bf4c979efea8da04730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wave: 5
+  Wave: 1
   timer: {fileID: 1748564237}
   TimeUp: 0
   Boss: 0
@@ -2791,7 +2791,6 @@ GameObject:
   - component: {fileID: 2067639143}
   - component: {fileID: 2067639142}
   - component: {fileID: 2067639141}
-  - component: {fileID: 2067639145}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2893,26 +2892,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!95 &2067639145
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067639140}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d2cabd8229572dc43a7ab78d3a693842, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2103730327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3261,7 +3240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: Boss.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: Enemy.Array.size
@@ -3271,6 +3250,18 @@ PrefabInstance:
       propertyPath: Boss.Array.data[0]
       value: 
       objectReference: {fileID: 4633478626829468960, guid: 5d5a68960ccd1b747a0f58644c686bcb, type: 3}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Boss.Array.data[1]
+      value: 
+      objectReference: {fileID: 2250546736433840334, guid: c54d824b1e0159f4c8191128b40f93e6, type: 3}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Boss.Array.data[2]
+      value: 
+      objectReference: {fileID: 7618351435262869619, guid: 7e41249a0db3a594782908f25a57be5d, type: 3}
+    - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Boss.Array.data[3]
+      value: 
+      objectReference: {fileID: 268513291500746591, guid: 6935e2daa1a79814bb0fd55bd3e85dc2, type: 3}
     - target: {fileID: 1367245037, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: Enemy.Array.data[0]
       value: 
