@@ -53,7 +53,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3971768420772895628, guid: e8f0daffc86b40f44ac4a975247a752a, type: 3}
       propertyPath: m_Name
-      value: Enemy (1)
+      value: Enemy (1) Variant 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6124253383516929110, guid: e8f0daffc86b40f44ac4a975247a752a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8f0daffc86b40f44ac4a975247a752a, type: 3}
+--- !u!1 &4739285294254842291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3971768420772895628, guid: e8f0daffc86b40f44ac4a975247a752a, type: 3}
+  m_PrefabInstance: {fileID: 8564681594642807359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &-5231467898965300405
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4739285294254842291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f818c375199aa6a46a6d918e8559bc00, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
