@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     public float ThermalTick = 1f;
     public float ThermalTickStart = 1f;
     public double ThermalDamage = 5;
+    public Animator _anim;
     void Start()
     {
         Playerpos = GameObject.Find("Player");
@@ -41,6 +42,7 @@ public class Enemy : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, Playpos, step);
         if (Health <= 10)
         {
+            _anim.SetTrigger("death");
             Destroy(gameObject);
         }
         if (Burn == true)

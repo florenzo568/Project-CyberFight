@@ -140,6 +140,7 @@ MonoBehaviour:
   ThermalTick: 1
   ThermalTickStart: 1
   ThermalDamage: 5
+  _anim: {fileID: -5944406902986060234}
 --- !u!95 &-5944406902986060234
 Animator:
   serializedVersion: 4
