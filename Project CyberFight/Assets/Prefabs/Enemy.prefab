@@ -131,7 +131,7 @@ MonoBehaviour:
   StartHealth: 0
   Player: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
   Playerpos: {fileID: 523672501267282731, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
-  Damage: 0
+  Damage: 5
   BulletDamage: 10
   Burn: 0
   BurnTick: 2
@@ -141,6 +141,7 @@ MonoBehaviour:
   ThermalTickStart: 1
   ThermalDamage: 5
   _anim: {fileID: -5944406902986060234}
+  active: 1
 --- !u!95 &-5944406902986060234
 Animator:
   serializedVersion: 4

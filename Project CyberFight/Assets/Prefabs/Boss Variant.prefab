@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529418215295040840, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3529418215295040840, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
       propertyPath: m_LocalScale.y
@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529418215295040840, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3529418215295040841, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
       propertyPath: Speed
@@ -93,3 +93,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
+--- !u!1 &4633478626829468960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3529418215295040844, guid: c2de8260b8fb7d749a313186091270ac, type: 3}
+  m_PrefabInstance: {fileID: 8121801478009337964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7956189173321487594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4633478626829468960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b38243752c7e304fbf9589c60a6fe6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Playerpos: {fileID: 0}

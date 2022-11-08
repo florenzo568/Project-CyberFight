@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     public float StartHealth;
     public GameObject Player;
     public CountDownTimer Timer;
+    public Animator anim;
     public bool Spawn = false;
     [SerializeField] GameObject Projectile;
     [SerializeField] GameObject HeavyProjectile;
@@ -88,8 +89,12 @@ public class PlayerMove : MonoBehaviour
 
     void Inputs()
     {
-        moveX = Input.GetAxisRaw("Horizontal");
-        moveY = Input.GetAxisRaw("Vertical");
+        if (Active == true)
+        {
+            moveX = Input.GetAxisRaw("Horizontal");
+            moveY = Input.GetAxisRaw("Vertical");
+        }
+        
         dir = new Vector2(moveX, moveY).normalized;
         
         if (moveX > 0 && !facingRight)
@@ -193,11 +198,13 @@ public class PlayerMove : MonoBehaviour
     }
     void Death()
     {
-        SpriteRenderer m_SpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        m_SpriteRenderer.enabled = false;
-        rb.velocity = new Vector2 (0,0);
-        //death anim + death Screen
         Active = false;
+        SpriteRenderer m_SpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        //m_SpriteRenderer.enabled = false;
+        rb.velocity = Vector2.zero;
+        anim.SetTrigger("death");
+        //death anim + death Screen
+        
     }
 
     

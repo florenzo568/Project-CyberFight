@@ -3283,6 +3283,10 @@ PrefabInstance:
       value: FirePoint
       objectReference: {fileID: 0}
     - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1367245044}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: Speed
       value: 9
       objectReference: {fileID: 0}
@@ -3290,6 +3294,10 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 1748564237}
+    - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: Health
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: FireRate
       value: 0.3

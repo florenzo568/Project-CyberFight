@@ -51,9 +51,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2250546736433840331, guid: c54d824b1e0159f4c8191128b40f93e6, type: 3}
+      propertyPath: _anim
+      value: 
+      objectReference: {fileID: 558722435002492190}
     - target: {fileID: 2250546736433840334, guid: c54d824b1e0159f4c8191128b40f93e6, type: 3}
       propertyPath: m_Name
-      value: Boss Variant
+      value: Boss Variant Variant 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c54d824b1e0159f4c8191128b40f93e6, type: 3}
+--- !u!95 &558722435002492190 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -1062105102468323933, guid: c54d824b1e0159f4c8191128b40f93e6, type: 3}
+  m_PrefabInstance: {fileID: 8539491272558346429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7618351435262869619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2250546736433840334, guid: c54d824b1e0159f4c8191128b40f93e6, type: 3}
+  m_PrefabInstance: {fileID: 8539491272558346429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4650448483431145210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618351435262869619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b38243752c7e304fbf9589c60a6fe6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Playerpos: {fileID: 0}
