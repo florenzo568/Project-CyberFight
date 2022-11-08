@@ -47,7 +47,7 @@ public class PlayerMove : MonoBehaviour
     {
         FireRate = FireRate - Time.deltaTime;
         Inputs();
-        if(Timer.Shoptimer != true)
+        if(Timer.Shoptimer != true && Active != false)
         {
             Shoot1();
         }

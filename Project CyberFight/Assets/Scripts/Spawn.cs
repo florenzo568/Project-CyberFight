@@ -30,6 +30,7 @@ public class Spawn : MonoBehaviour
     public GameObject Final2;
     public Enemy BossStatsFinal1;
     public Enemy BossStatsFinal2;
+    private int EndGame;
 
 
     void Start()
@@ -59,9 +60,14 @@ public class Spawn : MonoBehaviour
             BossWaveSpawn = true;
             Waves.BossWave = false;
         }
-        if(BossWave == true && BossStatsFinal1.Health <= 1 && BossStatsFinal2.Health <= 1)
+        if(BossWave == true && BossStatsFinal1 == null && BossStatsFinal2 == null)
         {
             Debug.Log("End Game");
+            EndGame += 1;
+            if (EndGame > 1)
+            {
+                Debug.Log("EndGame FR NOW");
+            }
         }
         
     }
