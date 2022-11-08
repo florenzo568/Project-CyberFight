@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 654209496, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 654209496, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.64
+      objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254056, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_Name
       value: Hack Variant
@@ -68,16 +76,20 @@ PrefabInstance:
       value: HackText
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254063, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee276117f15454e47a67cf1f661e8cc0, type: 3}
+    - target: {fileID: 2955333758994254063, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254063, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_Color.g
-      value: 0.31132078
+      value: 0.9253745
       objectReference: {fileID: 0}
     - target: {fileID: 2955333758994254063, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
       propertyPath: m_Color.r
-      value: 0.053682983
+      value: 0.63529414
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e84ce6f355175468f5467f44325c47, type: 3}
@@ -103,7 +115,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
