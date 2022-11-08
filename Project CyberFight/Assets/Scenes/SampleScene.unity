@@ -2862,7 +2862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9414adb509ba8bf4c979efea8da04730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wave: 4
+  Wave: 1
   timer: {fileID: 1748564237}
   TimeUp: 0
   Boss: 0
@@ -2976,7 +2976,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.30448514, g: 0.9150943, b: 0.28920433, a: 1}
   m_FlipX: 0
@@ -3017,11 +3017,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 877626690631958329, guid: 49c716874bc7dca40a0d56bb994f7b52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.67
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 877626690631958329, guid: 49c716874bc7dca40a0d56bb994f7b52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.03
+      value: 9.16
       objectReference: {fileID: 0}
     - target: {fileID: 877626690631958329, guid: 49c716874bc7dca40a0d56bb994f7b52, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3576,8 +3576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023644565e1f46640a45e8a98c88ebd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTime: 10
-  startingTime: 10
+  currentTime: 60
+  startingTime: 60
   ShopTime: 0
   Shop: 0
   Shoptimer: 0
@@ -4281,11 +4281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2777582907799704651, guid: 80460c736afb8634b85c23c1dcf10083, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.19
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2777582907799704651, guid: 80460c736afb8634b85c23c1dcf10083, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.74
+      value: 11.26
       objectReference: {fileID: 0}
     - target: {fileID: 2777582907799704651, guid: 80460c736afb8634b85c23c1dcf10083, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4568,11 +4568,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2777054222156367984, guid: 13cc0375c4326e74694c4be33f8d3c4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.02
+      value: -8.26
       objectReference: {fileID: 0}
     - target: {fileID: 2777054222156367984, guid: 13cc0375c4326e74694c4be33f8d3c4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.96
+      value: 10.08
       objectReference: {fileID: 0}
     - target: {fileID: 2777054222156367984, guid: 13cc0375c4326e74694c4be33f8d3c4a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4959,15 +4959,15 @@ PrefabInstance:
       objectReference: {fileID: 1748564237}
     - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: Health
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: FireRate
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: FireRatereset
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 523672501267282724, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: GameOverScreen

@@ -83,7 +83,7 @@ public class CountDownTimer : MonoBehaviour
     {
         if(Shop == true)
         {
-            ShopTime = 12;
+            ShopTime = 15;
             SpawnShop();
             Shop = false;
             Shoptimer = true;
