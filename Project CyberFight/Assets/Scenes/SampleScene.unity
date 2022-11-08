@@ -1342,6 +1342,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f72d46730c378498b8b7b12c245757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1367245044
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367245031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b136558fa431fc7449db69a608c626fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1432038629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1396,7 @@ MonoBehaviour:
   timer: {fileID: 1748564237}
   TimeUp: 0
   Boss: 0
+  BossWave: 0
   Shop: 0
 --- !u!4 &1432038631
 Transform:
@@ -1814,6 +1835,7 @@ MonoBehaviour:
   Shop2: {fileID: 1010252672}
   Item1CS: {fileID: 0}
   Item2CS: {fileID: 0}
+  WaveScaler: 0
   Pool1:
   - {fileID: 2777054222156367950, guid: 13cc0375c4326e74694c4be33f8d3c4a, type: 3}
   - {fileID: 877626690631958333, guid: 49c716874bc7dca40a0d56bb994f7b52, type: 3}
@@ -2964,6 +2986,10 @@ PrefabInstance:
       propertyPath: ReverseProjectile
       value: 
       objectReference: {fileID: 662286198841716022, guid: 9a6f0d023f3b2c94497b040669c25ed7, type: 3}
+    - target: {fileID: 523672501267282726, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 523672501267282727, guid: 642f6a339ba67594dac4649fdb9fec13, type: 3}
       propertyPath: m_RootOrder
       value: 2
